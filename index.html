@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SDG</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div id="app">
+        <div class='phone'>
+            <div class='category'> 
+                <div class='first_row'>
+                    <div class='title'>FIT GUIDE</div>
+                    <div class='expand' @click="expand(1)">{{expandOperator1}}</div>
+                </div>
+                <div v-show="expand1" class='content'>
+                    this is some text that should be text centered.this is some text that should be text centered.
+                    this is some text that should be text centered.this is some text that should be text centered.
+                    this is some text that should be text centered.this is some text that should be text centered.
+                    this is some text that should be text centered.this is some text that should be text centered.
+                    this is some text that should be text centered.this is some text that should be text centered.
+                    this is some text that should be text centered.this is some text that should be text centered.
+                    this is some text that should be text centered.this is some text that should be text centered.
+                    this is some text that should be text centered.this is some text that should be text centered.
+                </div>
+            </div>   
+            <hr> 
+            <div class='category'> 
+                <div class='first_row'>
+                    <div class='title'>CARE</div>
+                    <div class='expand' @click="expand(2)">{{expandOperator2}}</div>
+                </div>
+                <div v-show="expand2" class='content'>
+                    this is some text that should be text centered.
+                    this is some text that should be text centered.
+                    this is some text that should be text centered.
+                    this is some text that should be text centered.
+                    this is some text that should be text centered.
+                </div>
+            </div>   
+            <hr> 
+            <div class='category'> 
+                <div class='first_row'>
+                    <div class='title'>MATERIALS</div>
+                    <div class='expand' @click="expand(3)">{{expandOperator3}}</div>
+                </div>
+                <div v-show="expand3" class='materials'>
+                    <div class='percent'>
+                        <div>
+                            <p class="percentValue">50%</p>
+                            <p class='percentName'>cashmere</p>
+                        </div>
+                        <div>
+                            <p class="percentValue">46%</p>
+                            <p class='percentName'>wool</p>
+                        </div>
+                        <div>
+                            <p class="percentValue">4%</p>
+                            <p class='percentName'>modal</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class='content'>
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                    </div>
+                    
+                </div>
+            </div>   
+
+        </div>
+        <div class='desktop'>
+            <div class='navbar'>
+                <div class='category' :class="{active: isActive1}" @click="select(1)">FIT GUIDE</div>
+                <div class='category' :class="{active: isActive2}" @click="select(2)">CARE</div>
+                <div class='category' :class="{active: isActive3}" @click="select(3)">MATERIALS</div>
+            </div>
+            <div class='detail'>
+                <div v-show="cat1" class='content'>
+                        fit fit fit fit fit fit fit fit fit fit 
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                </div>
+                <div v-show="cat2" class='content'>
+                    care care care care care care care care care care 
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                </div>
+                <div v-show='cat3' class='materials'>
+                    <div class='percent'>
+                        <div>
+                            <p class="percentValue">50%</p>
+                            <p class='percentName'>cashmere</p>
+                        </div>
+                        <div>
+                            <p class="percentValue">46%</p>
+                            <p class='percentName'>wool</p>
+                        </div>
+                        <div>
+                            <p class="percentValue">4%</p>
+                            <p class='percentName'>modal</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class='content'>
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                        this is some text that should be text centered.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
